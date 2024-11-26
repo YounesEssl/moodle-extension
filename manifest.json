@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Moodle Quiz Assistant",
+  "version": "1.0.0",
+  "description": "Assistant pour les tests Moodle utilisant Claude API",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["activeTab", "storage", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://sandbox404.moodledemo.net/*"],
+      "css": [],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://api.anthropic.com/*",
+    "https://sandbox404.moodledemo.net/*"
+  ]
+}
